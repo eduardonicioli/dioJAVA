@@ -30,7 +30,7 @@ public class PetMachine {
         waterLevel += 2;
     }
 
-    public void addShampo(){
+    public void addShampoo(){
         if (shampooLevel == 10){
             System.out.println("Nível de shampoo já está cheio");
             return;
@@ -52,7 +52,7 @@ public class PetMachine {
     }
 
     public void setPet(Pet pet) {
-        if (this.clean){
+        if (!this.clean){
             System.out.println("A máquina está suja, limpe-a antes de colocar um novo pet");
             return;
         }
@@ -65,8 +65,8 @@ public class PetMachine {
     }
 
     public void removePet() {
-        this.clean = this.pet.isClean()
-        System.out.println("O Pet "+ this.pet.getName()+ "está limpo e saiu da máquina");
+        this.clean = this.pet.isClean();
+        System.out.println("O Pet "+ this.pet.getName() + " está limpo e saiu da máquina");
         this.pet = null;
     }
 
